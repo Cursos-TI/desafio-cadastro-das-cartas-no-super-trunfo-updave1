@@ -10,6 +10,9 @@ int main() {
     float pib;//PIB da cidade  
     int pontos_turisticos;//Número de pontos turísticos da cidade
 
+    float densidade_populacional;//Densidade populacional da cidade (população/área)
+    float pib_per_capita;//PIB per capita da cidade (pib/população)
+
     // Inserção de dados das cartas:
     printf("Digite código da carta:\n ");
     scanf("%4s", codigo);
@@ -32,6 +35,11 @@ int main() {
     scanf("%d", &pontos_turisticos); 
     while (getchar() != '\n');  
 
+    //Cálculo da densidade populacional
+    densidade_populacional = populacao/area;
+    //Cálculo do PIB per capita
+    pib_per_capita = pib/populacao;
+
     //Mensagem de confirmação
     printf("***Carta cadastrada com sucesso!***\n");
     printf("----------------\n");
@@ -42,7 +50,9 @@ int main() {
     printf("Área: %.2f km²\n", area);
     printf("PIB: R$ %.2f bilhões de reais\n", pib);
     printf("Pontos turisticos: %d\n", pontos_turisticos);
-
+    printf("Densidade populacional: %.1f hab/km²\n", densidade_populacional);
+    printf("PIB per capita: R$ %.2f\n", pib_per_capita);
+    
     printf("----------------\n");
 
     return 0;
