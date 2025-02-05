@@ -13,6 +13,7 @@ int main() {
     float densidade_populacional1, densidade_populacional2;//Densidade populacional da cidade (população/área)
     float pib_per_capta1, pib_per_capta2;//PIB per capita da cidade (pib/população)
     float superpoder1, superpoder2;// Calculada conforme a soma de todas as propriedades da carta
+    float superpoder;//Superpoder da carta | (Soma de todas as propriedades da carta)
 
     // Inserção de dados das cartas:
     //Carta 1
@@ -77,6 +78,10 @@ int main() {
     pib_per_capta1 = pib1/populacao1;
     pib_per_capta2 = pib2/populacao2;
 
+    //Cálculo do superpoder
+    superpoder1 = populacao1 + area1 + pib1 + pontos_turisticos1 + (1/densidade_populacional1) + pib_per_capta1;
+    superpoder2 = populacao2 + area2 + pib2 + pontos_turisticos2 + (1/densidade_populacional2) + pib_per_capta2;
+
     printf("------------------------------------------\n");
     printf("\n");
 
@@ -99,6 +104,7 @@ int main() {
     printf("Pontos turisticos: %d\n", pontos_turisticos1);
     printf("Densidade populacional: %.1f hab/km²\n", densidade_populacional1);
     printf("PIB per capita: R$ %.2f\n", pib_per_capta1);
+    printf("**Superpoder**: %.2f\n", superpoder1);
     
     printf("------------------------------------------\n");
 
@@ -114,8 +120,11 @@ int main() {
     printf("Pontos turisticos: %d\n", pontos_turisticos2);
     printf("Densidade populacional: %.1f hab/km²\n", densidade_populacional2);
     printf("PIB per capita: R$ %.2f\n", pib_per_capta2);
+    printf("**Superpoder**: %.2f\n", superpoder2);
 
     printf("------------------------------------------\n");
+
+
 
 
     return 0;
