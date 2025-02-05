@@ -123,7 +123,20 @@ int main() {
     printf("**Superpoder**: %.2f\n", superpoder2);
 
     printf("------------------------------------------\n");
-
+    //comparação entre as cartas
+    printf("\n");
+    printf(" *** Resultado da Rodada ***\n");
+    printf("\n");
+    
+    printf("Maior População: %d\n", populacao1>populacao2);
+    printf("Maior Área: %d\n", area1>area2);
+    printf("Maior PIB: %d\n", pib1>pib2);
+    printf("Maior Número de Pontos Turísticos: %d\n", pontos_turisticos1>pontos_turisticos2);
+    printf("Menor Densidade Populacional: %d\n", densidade_populacional1<densidade_populacional2);
+    printf("Maior PIB per Capita: %d\n", pib_per_capta1>pib_per_capta2);
+    printf("\n");
+    printf("Maior Superpoder !!: %d\n", superpoder1>superpoder2);
+    printf("\n");
 
 
 
